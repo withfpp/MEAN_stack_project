@@ -1,6 +1,5 @@
 'use strict';
 
-
 angular.module('angAppApp')
   .controller('LoginCtrl', function ($scope, alert, auth, $auth) {
   

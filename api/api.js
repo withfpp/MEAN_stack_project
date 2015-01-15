@@ -10,6 +10,8 @@ var facebookAuth = require('./services/facebookAuth.js');
 var createSendToken = require('./services/jwt.js');
 var LocalStrategy = require('./services/localStrategy.js');
 var jobs = require('./services/jobs.js');
+var find = require('./services/find.js');
+
 var emailVerification = require('./services/emailVerification.js');
 
 var app = express();
@@ -43,6 +45,7 @@ app.post('/register', passport.authenticate('local-register'), function(req, res
 })
 
 app.get('/jobs', jobs);
+app.get('/find', find);
 
 app.post('/login', passport.authenticate('local-login'), function (req, res){
   createSendToken(req.user, res);

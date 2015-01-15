@@ -7,8 +7,9 @@
  * # angAppApp
  *
  * Main module of the application.
+ * Satellizer is module that provide authentication service for angular
  */
-angular
-  .module('angAppApp', [
-    'ui.router', 'ngAnimate', 'satellizer'
-  ]);
+
+ 
+var angAppApp = 
+  angular.module('angAppApp', ['ui.router', 'ngAnimate', 'satellizer']);

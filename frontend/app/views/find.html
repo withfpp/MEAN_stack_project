@@ -1,0 +1,30 @@
+<h1>Who is the best Plumber</h1>
+Order by:
+<select ng-model="sorting" class="">
+  <option selected value="name">Name</option>
+  <option value="-voteNum">Votes</option>
+</select>
+<div ng-repeat="plumber in plumbers | orderBy:sorting">
+  <div class="row pluber well">
+    
+    <div class="col-xs-3">
+      <div class="votingWidget">
+        <div class="votingButton" ng-click="up(plumber)">
+          <i class="fa fa-chevron-up"></i>
+        </div>
+        <div class="badge badge-inverse">
+          <div>{{plumber.voteNum}}</div>
+        </div>
+        <div class="votingButton" ng-click="down(plumber)">
+          <i class="fa fa-chevron-down"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-9">
+      <li>name: {{plumber.name}}</li>
+      <li>vote: {{plumber.voteNum}}</li>
+    </div>
+  
+</div>
+

@@ -1,0 +1,11 @@
+<h1>Who is the best Plumber</h1>
+Order by:
+<select ng-model="sortOrder" class="input-small" name="" id="">
+  <option selected value="name">Name</option>
+  <option value="upVoteNumber">Votes</option>
+</select>
+<div ng-repeat="plumber in plumbers">
+  <button>UP</button>
+  <li>name: {{name}}</li>
+  <li>vote: {{vote}}</li>
+</div>

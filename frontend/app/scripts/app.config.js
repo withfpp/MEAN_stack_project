@@ -27,6 +27,12 @@ angular.module('angAppApp').config(function ($urlRouterProvider, $stateProvider,
     controller: 'JobsCtrl'
   })
 
+  .state('find', {
+    url: '/find',
+    templateUrl: '/views/find.html',
+    controller: 'FindCtrl'
+  })
+
   .state('logout', {
     url: '/logout',
     controller: 'LogoutCtrl'
